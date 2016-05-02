@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = 'datapipe2'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2016-05-02'
   s.summary     = "DataPipe2"
-  s.description = "Helping to move data around your system"
+  s.description = "zero to one for moving data"
   s.authors     = ["Guy Irvine"]
   s.email       = 'guy@guyirvine.com'
   s.files       = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
