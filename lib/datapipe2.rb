@@ -10,6 +10,7 @@ module DataPipe2
   require 'fns/db_to_csv'
   require 'fns/db_to_json'
   require 'fns/csv_to_db'
+  require 'fns/mssql_to_pgsql'
 
   class DataPipe2lineError < StandardError
   end
