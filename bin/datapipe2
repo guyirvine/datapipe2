@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#
+#
+# The application 'datapipe' is installed as part of a gem, and
+# this file is here to facilitate running it.
+#
+# $LOAD_PATH.unshift '/guyirvine.com/datapipe2/lib'
+
+require 'rubygems'
+require 'datapipe2'
+
+if ARGV.length == 0
+  DataPipe2::Host.new.run
+else
+  method_name = ARGV.shift
+  send(method_name, *ARGV)
+end

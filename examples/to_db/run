@@ -1,0 +1,3 @@
+DB=pgsql://testuser:testpass@localhost/datapipe2 \
+Bcs_CRON="* * * * *" \
+datapipe2

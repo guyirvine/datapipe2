@@ -1,0 +1,3 @@
+DB=pgsql://girvine:coffee11@localhost/datapipe2 \
+Bcs_CRON="* * * * *" \
+datapipe2
