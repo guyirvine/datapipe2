@@ -1,11 +1,11 @@
 
-def mssql_to_pgsql(mssql, pgsql, select_sql, tableName, columns)
-  s = FluidDb::Db(ENV[mssql]) # source
-  d = FluidDb::Db(ENV[pgsql]) # destination
+def mssql_to_pgsql(select_sql, table_name, columns)
+  s = FluidDb::Db(ENV['MSSQL']) # source
+  d = FluidDb::Db(ENV['PGSQL']) # destination
 
-  d.connection.exec("TRUNCATE TABLE #{tableName}")
+  d.connection.exec("TRUNCATE TABLE #{table_name}")
   copy_cmd = %{
-    COPY #{tableName} (#{columns.join(',')})
+    COPY #{table_name} (#{columns})
     FROM STDIN
     WITH DELIMITER AS '|'
     CSV;"
@@ -21,5 +21,5 @@ def mssql_to_pgsql(mssql, pgsql, select_sql, tableName, columns)
   end
   d.connection.put_copy_end
 
-  DataPipe2.log "#{tableName}: #{count}"
+  DataPipe2.log "#{table_name}: #{count}"
 end
