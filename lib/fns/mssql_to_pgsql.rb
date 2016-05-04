@@ -8,7 +8,7 @@ def mssql_to_pgsql(select_sql, table_name, columns)
     COPY #{table_name} (#{columns})
     FROM STDIN
     WITH DELIMITER AS '|'
-    CSV;"
+    CSV;
   }
   d.connection.exec(copy_cmd)
 

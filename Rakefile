@@ -13,6 +13,7 @@ task :install do
   cmd = "sudo gem install ./#{Dir.glob('datapipe2*.gem').sort.pop}"
   p "cmd: #{cmd}"
   `#{cmd}`
+  p "gem push ./#{Dir.glob('datapipe2*.gem').sort.pop}"
 end
 
 desc 'Run tests'

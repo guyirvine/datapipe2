@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'datapipe2'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.license     = 'LGPL-3.0'
   s.date        = '2016-05-03'
   s.summary     = 'DataPipe2'
