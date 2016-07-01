@@ -17,6 +17,7 @@ def mssql_to_pgsql(select_sql, table_name, columns)
   count = 0
   results.each(as: array, cache_rows: false) do |r|
     count += 1
+    p '.' if count % 1000 == 0
     d.connection.put_copy_data "#{r.join('|')}\n"
   end
   d.connection.put_copy_end
