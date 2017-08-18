@@ -11,6 +11,7 @@ module DataPipe2
   require 'fns/db_to_json'
   require 'fns/csv_to_db'
   require 'fns/mssql_to_pgsql'
+  require 'fns/db_to_pgsql'
   require 'fns/smb_to_local'
   require 'fns/scp_to_local'
   require 'fns/db_to_db'

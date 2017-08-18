@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name        = 'datapipe2'
-  s.version     = '0.0.14'
+  s.version     = '0.0.16'
   s.license     = 'LGPL-3.0'
-  s.date        = '2016-08-17'
+  s.date        = '2017-08-18'
   s.summary     = 'DataPipe2'
   s.description = 'zero to one for moving data'
   s.authors     = ['Guy Irvine']

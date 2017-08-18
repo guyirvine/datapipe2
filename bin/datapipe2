@@ -13,5 +13,6 @@ if ARGV.length == 0
   DataPipe2::Host.new.run
 else
   method_name = ARGV.shift
+  puts "method_name: #{method_name}"
   send(method_name, *ARGV)
 end
